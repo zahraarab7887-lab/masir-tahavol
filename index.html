@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
 <head>
-
 <meta charset="UTF-8">
-
 <title>سرفصل اول</title>
 
 <style>
@@ -39,57 +36,79 @@ font-size:20px;
 line-height:2;
 }
 
-.start{
-font-size:24px;
-font-weight:bold;
-color:#5f7758;
-margin:20px 0 15px;
-animation:bounce 1.2s infinite;
-}
-
-@keyframes bounce{
-0%,100%{
-transform:translateY(0);
-}
-50%{
-transform:translateY(8px);
-}
-}
-
 .icons{
 display:flex;
 justify-content:center;
-gap:30px;
-margin-top:25px;
-font-size:55px;
+gap:22px;
+margin-top:30px;
 flex-wrap:wrap;
 }
 
+.card{
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
 .item{
+font-size:55px;
 text-decoration:none;
 transition:.3s;
 }
 
 .item:hover{
-transform:scale(1.25);
+transform:scale(1.15);
 }
 
-.first{
-font-size:68px;
+.label{
+margin-top:10px;
+font-size:16px;
+font-weight:bold;
+color:#5f7758;
+}
+
+.first-card{
+position:relative;
+padding:15px;
+border:3px solid #d4af37;
+border-radius:18px;
+background:#fffdf5;
+box-shadow:0 0 15px rgba(212,175,55,.45);
+animation:glow 2s infinite;
+}
+
+.first-card::before{
+content:"شروع مسیر از اینجاست 👇";
+position:absolute;
+top:-45px;
+right:50%;
+transform:translateX(50%);
+background:#5f7758;
+color:white;
+padding:6px 12px;
+border-radius:10px;
+font-size:14px;
+white-space:nowrap;
+}
+
+@keyframes glow{
+0%,100%{
+box-shadow:0 0 10px rgba(212,175,55,.4);
+}
+50%{
+box-shadow:0 0 22px rgba(212,175,55,.9);
+}
 }
 
 </style>
 
 </head>
-
 <body>
 
 <header>
 
 🌱 سرفصل اول
-
 <br>
-
 معنا و ضرورت تحول
 
 </header>
@@ -97,39 +116,25 @@ font-size:68px;
 <div class="box">
 
 <p>
-
-به ایستگاه اول خوش اومدی...
-
+به ایستگاه اول خوش اومدی... 👋
 </p>
 
 <p>
-
-از یکی از آیکون‌های زیر وارد بخش موردنظرت شو.
-
+برای اینکه بهترین تجربه رو از این سفر داشته باشی، مسیر رو به ترتیب جلو برو. 😉
 </p>
-
-<div class="start">
-
-👇 از اینجا شروع کن
-
-</div>
 
 <div class="icons">
 
-<a href="mohtava.html" class="item first">📖</a>
+<div class="card first-card">
+<a href="mohtava.html" class="item">📖</a>
+<div class="label">محتوا</div>
+</div>
 
+<div class="card">
 <a href="summary.html" class="item">📝</a>
+<div class="label">آنچه گذشت</div>
+</div>
 
+<div class="card">
 <a href="rizgh.html" class="item">🌱</a>
-
-<a href="taamol.html" class="item">💭</a>
-
-<a href="mission.html" class="item">🎯</a>
-
-</div>
-
-</div>
-
-</body>
-
-</html>
+<div
