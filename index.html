@@ -4,66 +4,77 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>دوره علمی تخصصی مسیر</title>
 
 <style>
 
-*{
+body{
 margin:0;
-padding:0;
-box-sizing:border-box;
+font-family:tahoma;
+background:#f7f5ef;
+direction:rtl;
+text-align:center;
 }
 
-body{
-background:#f7f5ef;
-font-family:tahoma;
+header{
+background:#5f7758;
+color:white;
+padding:35px;
+}
+
+header h1{
+margin:0;
+font-size:36px;
+}
+
+header h2{
+margin-top:12px;
+font-size:24px;
+font-weight:normal;
 }
 
 .container{
-position:relative;
-max-width:1600px;
-margin:auto;
-}
-
-.container img{
-width:100%;
-display:block;
+width:90%;
+max-width:900px;
+margin:40px auto;
 }
 
 .card{
-position:absolute;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-text-decoration:none;
-color:#1f4d4d;
+background:white;
 border-radius:18px;
+padding:25px;
+margin:18px 0;
+box-shadow:0 0 15px rgba(0,0,0,.1);
 transition:.3s;
-padding:10px;
 }
 
 .card:hover{
-background:rgba(255,255,255,.18);
-transform:scale(1.02);
+transform:translateY(-5px);
 }
 
-.card h2{
-font-size:28px;
-margin-bottom:8px;
+.card a{
+text-decoration:none;
+color:#333;
+display:block;
 }
 
-.card p{
-font-size:22px;
-margin-bottom:8px;
+.number{
+font-size:34px;
+color:#5f7758;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.title{
+font-size:26px;
 font-weight:bold;
 }
 
-.card span{
-font-size:18px;
-color:#6b4d1d;
+.teacher{
+margin-top:10px;
+color:#666;
+font-size:20px;
 }
 
 </style>
@@ -72,64 +83,55 @@ color:#6b4d1d;
 
 <body>
 
+<header>
+
+<h1>🔰 دوره علمی تخصصی مسیر</h1>
+
+<h2>سرفصل‌های دوره</h2>
+
+</header>
+
 <div class="container">
 
-<img src="home.png" alt="مسیر">
-
-<!-- سرفصل اول -->
-<a class="card"
-href="index1.html"
-style="left:49%;top:13%;width:31%;height:8%;">
-<div>
-<h2>سرفصل اول</h2>
-<p>معنا و ضرورت تحول</p>
-<span>استاد صدیقی</span>
-</div>
+<div class="card">
+<a href="index1.html">
+<div class="number">۱</div>
+<div class="title">معنا و ضرورت تحول</div>
+<div class="teacher">استاد صدیقی</div>
 </a>
-
-<!-- سرفصل دوم -->
-<a class="card"
-href="#"
-style="left:39%;top:30%;width:31%;height:8%;">
-<div>
-<h2>سرفصل دوم</h2>
-<p>هویت معلمی</p>
-<span>استاد رفیعی</span>
 </div>
-</a>
 
-<!-- سرفصل سوم -->
-<a class="card"
-href="index3.html"
-style="left:29%;top:46%;width:30%;height:8%;">
-<div>
-<h2>سرفصل سوم</h2>
-<p>استعمار آموزشی</p>
-<span>استاد فیاضی</span>
-</div>
+<div class="card">
+<a href="index2.html">
+<div class="number">۲</div>
+<div class="title">هویت معلمی</div>
+<div class="teacher">استاد رفیعی</div>
 </a>
+</div>
 
-<!-- سرفصل چهارم -->
-<a class="card"
-href="#"
-style="left:16%;top:62%;width:30%;height:8%;">
-<div>
-<h2>سرفصل چهارم</h2>
-<p>جریان‌شناسی آموزش و پرورش</p>
-<span>استاد خاکی</span>
-</div>
+<div class="card">
+<a href="index3.html">
+<div class="number">۳</div>
+<div class="title">استعمار آموزشی</div>
+<div class="teacher">استاد فیاضی</div>
 </a>
+</div>
 
-<!-- سرفصل پنجم -->
-<a class="card"
-href="index5.html"
-style="left:12%;top:79%;width:28%;height:8%;">
-<div>
-<h2>سرفصل پنجم</h2>
-<p>نقش‌آفرینی دانشجومعلم</p>
-<span>استاد شمسینی</span>
-</div>
+<div class="card">
+<a href="index4.html">
+<div class="number">۴</div>
+<div class="title">جریان‌شناسی آموزش و پرورش</div>
+<div class="teacher">استاد خاکی</div>
 </a>
+</div>
+
+<div class="card">
+<a href="index5.html">
+<div class="number">۵</div>
+<div class="title">نقش‌آفرینی دانشجومعلم</div>
+<div class="teacher">استاد شمسینی</div>
+</a>
+</div>
 
 </div>
 
