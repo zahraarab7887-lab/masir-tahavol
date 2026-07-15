@@ -19,48 +19,9 @@ box-sizing:border-box;
 
 body{
 
+background:#f7f5ef;
+
 font-family:tahoma;
-
-background:linear-gradient(
-180deg,
-#eef5eb 0%,
-#f7f5ef 40%,
-#f5f0e6 100%
-);
-
-overflow-x:hidden;
-
-color:#2f3b2f;
-
-}
-
-header{
-
-text-align:center;
-
-padding:50px 20px 20px;
-
-}
-
-header h1{
-
-font-size:42px;
-
-color:#4d6648;
-
-margin-bottom:15px;
-
-}
-
-header h2{
-
-font-size:22px;
-
-font-weight:normal;
-
-color:#6c7d67;
-
-line-height:2;
 
 }
 
@@ -68,233 +29,104 @@ line-height:2;
 
 position:relative;
 
-width:100%;
-
-max-width:900px;
+max-width:1600px;
 
 margin:auto;
 
-padding-bottom:120px;
-
 }
-  /* ========================= */
-/* درخت */
-/* ========================= */
 
-.tree{
-
-position:relative;
+.container img{
 
 width:100%;
 
-height:1100px;
-
-margin-top:30px;
+display:block;
 
 }
 
-.trunk{
+.card{
 
 position:absolute;
 
-left:50%;
+display:block;
 
-transform:translateX(-50%);
+border-radius:18px;
 
-bottom:180px;
-
-width:45px;
-
-height:620px;
-
-background:#7b4f2c;
-
-border-radius:25px;
+transition:.3s;
 
 }
 
-.roots{
+.card:hover{
 
-position:absolute;
+background:rgba(95,119,88,.18);
 
-left:50%;
-
-transform:translateX(-50%);
-
-bottom:120px;
-
-width:260px;
-
-height:80px;
+transform:scale(1.03);
 
 }
 
-.root{
-
-position:absolute;
-
-height:10px;
-
-background:#7b4f2c;
-
-border-radius:20px;
-
-}
-
-.r1{
-
-width:90px;
-
-left:10px;
-
-bottom:50px;
-
-transform:rotate(-20deg);
-
-}
-
-.r2{
-
-width:100px;
-
-left:80px;
-
-bottom:20px;
-
-transform:rotate(10deg);
-
-}
-
-.r3{
-
-width:90px;
-
-right:20px;
-
-bottom:50px;
-
-transform:rotate(20deg);
-
-}
-
-.r4{
-
-width:90px;
-
-right:90px;
-
-bottom:0;
-
-transform:rotate(-10deg);
-
-}
-
-.crown{
-
-position:absolute;
-
-left:50%;
-
-transform:translateX(-50%);
-
-top:40px;
-
-width:520px;
-
-height:320px;
-
-background:#5f7758;
-
-border-radius:50%;
-
-box-shadow:
-
-0 0 0 35px rgba(95,119,88,.12),
-
-0 0 0 70px rgba(95,119,88,.06);
-
-}
-  </style>
+</style>
 
 </head>
 
-  <body>
-
-<header>
-
-<h1>🌱 دوره علمی تخصصی مسیر</h1>
-
-<h2>
-
-از ریشه‌های تحول<br>
-تا افق تمدن‌سازی
-
-</h2>
-
-</header>
+<body>
 
 <div class="container">
 
-<div class="tree">
+<img src="home.png">
 
-<div class="crown"></div>
+<!-- سرفصل اول -->
+<a class="card"
+href="index1.html"
+style="
+left:11%;
+top:79%;
+width:28%;
+height:8%;
+">
+</a>
 
-<div class="trunk"></div>
+<!-- سرفصل دوم -->
+<a class="card"
+href="index2.html"
+style="
+left:17%;
+top:62%;
+width:30%;
+height:8%;
+">
+</a>
 
-<div class="roots">
+<!-- سرفصل سوم -->
+<a class="card"
+href="index3.html"
+style="
+left:30%;
+top:46%;
+width:29%;
+height:8%;
+">
+</a>
 
-<div class="root r1"></div>
-<div class="root r2"></div>
-<div class="root r3"></div>
-<div class="root r4"></div>
+<!-- سرفصل چهارم -->
+<a class="card"
+href="index4.html"
+style="
+left:39%;
+top:30%;
+width:31%;
+height:8%;
+">
+</a>
 
-</div>
-
-</div>
-
-</div>
-
-</body>
-
-</html>
-
-  <body>
-
-<header>
-
-<h1>🌱 دوره علمی تخصصی مسیر</h1>
-
-<h2>
-
-از ریشه‌های تحول<br>
-
-تا افق تمدن‌سازی
-
-</h2>
-
-</header>
-
-<div class="container">
-
-<div class="tree">
-
-<div class="crown"></div>
-
-<div class="trunk"></div>
-
-<div class="roots">
-
-<div class="root r1"></div>
-
-<div class="root r2"></div>
-
-<div class="root r3"></div>
-
-<div class="root r4"></div>
-
-</div>
-
-</div>
+<!-- سرفصل پنجم -->
+<a class="card"
+href="index5.html"
+style="
+left:49%;
+top:13%;
+width:31%;
+height:8%;
+">
+</a>
 
 </div>
 
