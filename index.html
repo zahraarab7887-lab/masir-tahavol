@@ -41,13 +41,23 @@ flex-wrap:wrap;
 }
 
 .item{
+display:flex;
+flex-direction:column;
+align-items:center;
 text-decoration:none;
 color:#5f7758;
 transition:.3s;
 }
 
 .item:hover{
-transform:scale(1.2);
+transform:scale(1.1);
+}
+
+.label{
+font-size:16px;
+margin-top:8px;
+font-weight:bold;
+color:#444;
 }
 
 p{
@@ -55,14 +65,58 @@ font-size:20px;
 line-height:2;
 }
 
-/* راهنمای شروع */
-.start-book{
-position:relative;
-display:inline-block;
-}
+</style>
 
-.start-book::before{
-content:"👇 از اینجا شروع کن";
-position:absolute;
-top:-45px;
-left:
+</head>
+
+<body>
+
+<header>
+🌱 سرفصل اول
+<br>
+معنا و ضرورت تحول
+</header>
+
+<div class="box">
+
+<p>
+به ایستگاه اول خوش اومدی...
+</p>
+
+<p>
+از یکی از آیکون‌های زیر وارد بخش موردنظرت شو.
+</p>
+
+<div class="icons">
+
+<a class="item" href="content.html">
+📖
+<span class="label">محتوا</span>
+</a>
+
+<a class="item" href="summary.html">
+📝
+<span class="label">آنچه گذشت</span>
+</a>
+
+<a class="item" href="rizgh.html">
+🌱
+<span class="label">رزق</span>
+</a>
+
+<a class="item" href="taamol.html">
+💭
+<span class="label">تأمل</span>
+</a>
+
+<a class="item" href="mission.html">
+🎯
+<span class="label">مأموریت</span>
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>
