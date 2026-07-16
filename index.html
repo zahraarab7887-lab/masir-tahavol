@@ -287,6 +287,42 @@ font-size:16px;
 
 }
   
+.locked{
+
+opacity:.5;
+
+pointer-events:none;
+
+filter:grayscale(100%);
+
+position:relative;
+
+}
+
+.locked::after{
+
+content:"🔒 به زودی";
+
+position:absolute;
+
+top:15px;
+
+left:15px;
+
+background:#d32f2f;
+
+color:white;
+
+padding:6px 12px;
+
+border-radius:20px;
+
+font-size:13px;
+
+font-weight:bold;
+
+}
+  
 </style>
 
 </head>
@@ -376,7 +412,29 @@ lesson4: new Date("2026-07-23"), // ۱ مرداد
 lesson5: new Date("2026-07-24")  // ۲ مرداد
 
 };
+    
+const cards=document.querySelectorAll(".card");
 
+const dates=[
+unlockDates.lesson1,
+unlockDates.lesson2,
+unlockDates.lesson3,
+unlockDates.lesson4,
+unlockDates.lesson5
+];
+
+cards.forEach((card,index)=>{
+
+if(today<dates[index]){
+
+card.classList.add("locked");
+
+card.removeAttribute("href");
+
+}
+
+});
+    
 </script>
   
 </body>
