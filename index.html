@@ -631,7 +631,23 @@ card.setAttribute("data-status","🔒 فعال‌سازی: "+lessons[index].labe
 }
 
 });
-   
+    
+   if(msg !== ""){
+
+if(lastSeen !== todayKey){
+
+announcement.style.display="block";
+
+announcementText.innerHTML=msg;
+
+announcementBtn.href=link;
+
+localStorage.setItem("announcementDate",todayKey);
+
+}
+
+}
+    
 </script>
   
 </body>
