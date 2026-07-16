@@ -375,6 +375,88 @@ transform:translateY(0);
 
 }
   
+  .announcement{
+
+display:none;
+
+width:92%;
+
+max-width:900px;
+
+margin:25px auto;
+
+padding:18px;
+
+background:#dff6dd;
+
+border:2px solid #2e7d32;
+
+border-radius:18px;
+
+text-align:center;
+
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+animation:fadeDown .6s;
+
+}
+
+.announcement b{
+
+color:#1b5e20;
+
+font-size:20px;
+
+}
+
+.announcement-btn{
+
+display:inline-block;
+
+margin-top:15px;
+
+padding:12px 28px;
+
+background:#2e7d32;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:40px;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.announcement-btn:hover{
+
+background:#1b5e20;
+
+}
+
+@keyframes fadeDown{
+
+from{
+
+opacity:0;
+
+transform:translateY(-20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+  
 </style>
 
 </head>
@@ -400,6 +482,19 @@ transform:translateY(0);
 </a>
 
 </header>
+  
+  <div id="announcement" class="announcement">
+    <div id="announcementText"></div>
+
+    <a id="announcementBtn"
+       href="#"
+       class="announcement-btn">
+
+       ورود به ایستگاه
+
+    </a>
+
+</div>
   
 <section class="banner">
 
