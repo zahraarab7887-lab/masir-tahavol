@@ -561,7 +561,52 @@ lesson5: new Date("2026-07-24")  // ۲ مرداد
 };
     
 const cards=document.querySelectorAll(".card");
+    
+const announcement=document.getElementById("announcement");
+const announcementText=document.getElementById("announcementText");
+const announcementBtn=document.getElementById("announcementBtn");
 
+const todayKey=today.toISOString().split("T")[0];
+const lastSeen=localStorage.getItem("announcementDate");
+
+let msg="";
+let link="";
+    
+    if(today >= unlockDates.lesson5){
+
+msg="🎉 <b>ایستگاه پنجم فعال شد!</b><br>سرفصل «نقش‌آفرینی دانشجومعلم» از امروز فعال است.";
+link="index5.html";
+
+}
+
+else if(today >= unlockDates.lesson4){
+
+msg="🎉 <b>ایستگاه چهارم فعال شد!</b><br>سرفصل «جریان‌شناسی آموزش و پرورش» از امروز فعال است.";
+link="index4.html";
+
+}
+
+else if(today >= unlockDates.lesson3){
+
+msg="🎉 <b>ایستگاه سوم فعال شد!</b><br>سرفصل «استعمار آموزشی» از امروز فعال است.";
+link="index3.html";
+
+}
+
+else if(today >= unlockDates.lesson2){
+
+msg="🎉 <b>ایستگاه دوم فعال شد!</b><br>سرفصل «هویت معلمی» از امروز فعال است.";
+link="index2.html";
+
+}
+
+else if(today >= unlockDates.lesson1){
+
+msg="🎉 <b>ایستگاه اول فعال شد!</b><br>سرفصل «معنا و ضرورت تحول» از امروز فعال است.";
+link="index1.html";
+
+}
+    
 const lessons=[
 {date:unlockDates.lesson1,label:"۲۵ تیر"},
 {date:unlockDates.lesson2,label:"۲۹ تیر"},
