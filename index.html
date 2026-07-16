@@ -173,6 +173,120 @@ transform:scale(1.01);
 
 }
   
+  .course{
+
+width:92%;
+
+max-width:1000px;
+
+margin:20px auto 60px;
+
+}
+
+.course h2{
+
+text-align:center;
+
+font-size:30px;
+
+color:#4d6b50;
+
+margin-bottom:30px;
+
+}
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:20px;
+
+}
+
+.card{
+
+background:white;
+
+border-radius:22px;
+
+padding:28px;
+
+text-decoration:none;
+
+color:#333;
+
+box-shadow:0 10px 25px rgba(0,0,0,.10);
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 18px 35px rgba(0,0,0,.16);
+
+}
+
+.card span{
+
+font-size:42px;
+
+display:block;
+
+margin-bottom:15px;
+
+}
+
+.card h3{
+
+color:#5f7758;
+
+margin-bottom:12px;
+
+font-size:24px;
+
+}
+
+.card p{
+
+font-size:18px;
+
+line-height:1.8;
+
+}
+
+@media(max-width:768px){
+
+.course h2{
+
+font-size:24px;
+
+}
+
+.card{
+
+padding:22px;
+
+}
+
+.card h3{
+
+font-size:20px;
+
+}
+
+.card p{
+
+font-size:16px;
+
+}
+
+}
+  
 </style>
 
 </head>
@@ -202,6 +316,46 @@ transform:scale(1.01);
 <section class="banner">
 
 <img src="tree.png" alt="درخت مسیر">
+
+</section>
+  
+  <section class="course">
+
+<h2>ایستگاه‌های مسیر</h2>
+
+<div class="cards">
+
+<a href="index1.html" class="card">
+<span>🌱</span>
+<h3>ایستگاه اول</h3>
+<p>ضرورت تحول بنیادین</p>
+</a>
+
+<a href="index2.html" class="card">
+<span>🧩</span>
+<h3>ایستگاه دوم</h3>
+<p>هویت معلمی</p>
+</a>
+
+<a href="index3.html" class="card">
+<span>🛤️</span>
+<h3>ایستگاه سوم</h3>
+<p>چگونگی کنشگری</p>
+</a>
+
+<a href="index4.html" class="card">
+<span>✂️</span>
+<h3>ایستگاه چهارم</h3>
+<p>جریان‌شناسی آموزش و پرورش</p>
+</a>
+
+<a href="index5.html" class="card">
+<span>🏛️</span>
+<h3>ایستگاه پنجم</h3>
+<p>معلم؛ معمار تمدن نوین</p>
+</a>
+
+</div>
 
 </section>
   
