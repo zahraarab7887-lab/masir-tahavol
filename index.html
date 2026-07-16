@@ -301,8 +301,8 @@ position:relative;
 
 .locked::after{
 
-content:"🔒 به زودی";
-
+content:"🔒 " attr(data-date);
+  
 position:absolute;
 
 top:15px;
@@ -423,6 +423,14 @@ unlockDates.lesson4,
 unlockDates.lesson5
 ];
 
+const labels=[
+"فعال‌سازی: ۲۸ تیر",
+"فعال‌سازی: ۳۰ تیر",
+"فعال‌سازی: ۳۱ تیر",
+"فعال‌سازی: ۱ مرداد",
+"فعال‌سازی: ۲ مرداد"
+];
+
 cards.forEach((card,index)=>{
 
 if(today<dates[index]){
@@ -431,10 +439,12 @@ card.classList.add("locked");
 
 card.removeAttribute("href");
 
+card.setAttribute("data-date",labels[index]);
+
 }
 
 });
-    
+  
 </script>
   
 </body>
