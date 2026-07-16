@@ -493,58 +493,6 @@ card.setAttribute("data-status","🔒 فعال‌سازی: "+lessons[index].labe
 }
 
 });
-    
-  const announcement=document.getElementById("announcement");
-
-let message="";
-
-if(today>=unlockDates.lesson5){
-
-message=
-🎉 <strong>ایستگاه پنجم فعال شد!</strong><br>
-سرفصل <b>«نقش‌آفرینی دانشجومعلم»</b> از امروز در دسترس شماست.
-;
-
-}
-else if(today>=unlockDates.lesson4){
-
-message=
-🎉 <strong>ایستگاه چهارم فعال شد!</strong><br>
-سرفصل <b>«جریان‌شناسی آموزش و پرورش»</b> از امروز در دسترس شماست.
-;
-
-}
-else if(today>=unlockDates.lesson3){
-
-message=
-🎉 <strong>ایستگاه سوم فعال شد!</strong><br>
-سرفصل <b>«استعمار آموزشی»</b> از امروز در دسترس شماست.
-;
-
-}
-else if(today>=unlockDates.lesson2){
-
-message=
-🎉 <strong>ایستگاه دوم فعال شد!</strong><br>
-سرفصل <b>«هویت معلمی»</b> از امروز در دسترس شماست.
-;
-
-}
-else if(today>=unlockDates.lesson1){
-
-message=
-🎉 <strong>ایستگاه اول فعال شد!</strong><br>
-سرفصل <b>«معنا و ضرورت تحول»</b> از امروز در دسترس شماست.
-;
-
-}
-
-if(message!=""){
-
-announcement.style.display="block";
-announcement.innerHTML=message;
-
-}
    
 </script>
   
