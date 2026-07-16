@@ -287,39 +287,91 @@ font-size:16px;
 
 }
   
+.open{
+
+border:3px solid #2e7d32;
+
+}
+
 .locked{
 
-opacity:.5;
-
-pointer-events:none;
+opacity:.55;
 
 filter:grayscale(100%);
+
+pointer-events:none;
 
 position:relative;
 
 }
 
-.locked::after{
+.card::after{
 
-content:"🔒 " attr(data-date);
-  
-position:absolute;
+content:attr(data-status);
 
-top:15px;
+display:block;
 
-left:15px;
-
-background:#d32f2f;
-
-color:white;
-
-padding:6px 12px;
-
-border-radius:20px;
-
-font-size:13px;
+margin-top:16px;
 
 font-weight:bold;
+
+font-size:14px;
+
+color:#444;
+
+}
+  
+ #announcement{
+
+display:none;
+
+width:92%;
+
+max-width:900px;
+
+margin:20px auto;
+
+padding:18px;
+
+border-radius:18px;
+
+background:#fff8e1;
+
+border:2px solid #f9a825;
+
+color:#6d4c41;
+
+text-align:center;
+
+font-size:17px;
+
+font-weight:bold;
+
+line-height:1.9;
+
+box-shadow:0 8px 18px rgba(0,0,0,.12);
+
+animation:fadeDown .6s ease;
+
+}
+
+@keyframes fadeDown{
+
+from{
+
+opacity:0;
+
+transform:translateY(-20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
 
 }
   
@@ -348,6 +400,8 @@ font-weight:bold;
 </a>
 
 </header>
+  
+ <div id="announcement"></div> 
   
 <section class="banner">
 
@@ -415,36 +469,83 @@ lesson5: new Date("2026-07-24")  // ۲ مرداد
     
 const cards=document.querySelectorAll(".card");
 
-const dates=[
-unlockDates.lesson1,
-unlockDates.lesson2,
-unlockDates.lesson3,
-unlockDates.lesson4,
-unlockDates.lesson5
-];
-
-const labels=[
-"فعال‌سازی: ۲۸ تیر",
-"فعال‌سازی: ۳۰ تیر",
-"فعال‌سازی: ۳۱ تیر",
-"فعال‌سازی: ۱ مرداد",
-"فعال‌سازی: ۲ مرداد"
+const lessons=[
+{date:unlockDates.lesson1,label:"۲۸ تیر"},
+{date:unlockDates.lesson2,label:"۳۰ تیر"},
+{date:unlockDates.lesson3,label:"۳۱ تیر"},
+{date:unlockDates.lesson4,label:"۱ مرداد"},
+{date:unlockDates.lesson5,label:"۲ مرداد"}
 ];
 
 cards.forEach((card,index)=>{
 
-if(today<dates[index]){
+if(today>=lessons[index].date){
+
+card.classList.add("open");
+card.setAttribute("data-status","🟢 فعال");
+
+}else{
 
 card.classList.add("locked");
-
 card.removeAttribute("href");
-
-card.setAttribute("data-date",labels[index]);
+card.setAttribute("data-status","🔒 فعال‌سازی: "+lessons[index].label);
 
 }
 
 });
-  
+    
+  const announcement=document.getElementById("announcement");
+
+let message="";
+
+if(today>=unlockDates.lesson5){
+
+message=
+🎉 <strong>ایستگاه پنجم فعال شد!</strong><br>
+سرفصل <b>«نقش‌آفرینی دانشجومعلم»</b> از امروز در دسترس شماست.
+;
+
+}
+else if(today>=unlockDates.lesson4){
+
+message=
+🎉 <strong>ایستگاه چهارم فعال شد!</strong><br>
+سرفصل <b>«جریان‌شناسی آموزش و پرورش»</b> از امروز در دسترس شماست.
+;
+
+}
+else if(today>=unlockDates.lesson3){
+
+message=
+🎉 <strong>ایستگاه سوم فعال شد!</strong><br>
+سرفصل <b>«استعمار آموزشی»</b> از امروز در دسترس شماست.
+;
+
+}
+else if(today>=unlockDates.lesson2){
+
+message=
+🎉 <strong>ایستگاه دوم فعال شد!</strong><br>
+سرفصل <b>«هویت معلمی»</b> از امروز در دسترس شماست.
+;
+
+}
+else if(today>=unlockDates.lesson1){
+
+message=
+🎉 <strong>ایستگاه اول فعال شد!</strong><br>
+سرفصل <b>«معنا و ضرورت تحول»</b> از امروز در دسترس شماست.
+;
+
+}
+
+if(message!=""){
+
+announcement.style.display="block";
+announcement.innerHTML=message;
+
+}
+   
 </script>
   
 </body>
