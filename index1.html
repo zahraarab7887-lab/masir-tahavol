@@ -3,7 +3,95 @@
 <head>
 <meta charset="UTF-8">
 <title>سرفصل اول</title>
+.path{
 
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+margin:20px auto 10px;
+
+gap:8px;
+
+flex-wrap:nowrap;
+
+}
+
+.path .step{
+
+width:36px;
+
+height:36px;
+
+border-radius:50%;
+
+background:#d9d9d9;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-weight:bold;
+
+color:#666;
+
+font-size:16px;
+
+}
+
+.path .done{
+
+background:#5f7758;
+
+color:white;
+
+}
+
+.path .current{
+
+background:#b58b3b;
+
+color:white;
+
+transform:scale(1.15);
+
+}
+
+.path .line{
+
+width:35px;
+
+height:4px;
+
+background:#5f7758;
+
+border-radius:5px;
+
+}
+
+@media(max-width:768px){
+
+.path .step{
+
+width:30px;
+
+height:30px;
+
+font-size:14px;
+
+}
+
+.path .line{
+
+width:22px;
+
+}
+
+}
 <style>
 
 body{
@@ -76,6 +164,27 @@ line-height:2;
 <br>
 معنا و ضرورت تحول
 </header>
+  <div class="path">
+
+<div class="current step">۱</div>
+
+<div class="line"></div>
+
+<div class="step">۲</div>
+
+<div class="line"></div>
+
+<div class="step">۳</div>
+
+<div class="line"></div>
+
+<div class="step">۴</div>
+
+<div class="line"></div>
+
+<div class="step">۵</div>
+
+</div>
 
 <div class="box">
 
