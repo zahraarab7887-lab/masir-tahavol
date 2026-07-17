@@ -191,7 +191,32 @@ transform:scale(1.15);
 }
   
 </style>
+  
+<script>
 
+const today = new Date();
+
+const unlockDate = new Date("2026-07-24"); // ۲ مرداد
+
+window.addEventListener("DOMContentLoaded",()=>{
+
+const steps=document.querySelectorAll(".path a");
+
+const step5=steps[4];
+
+if(today<unlockDate){
+
+step5.style.opacity=".45";
+step5.style.cursor="not-allowed";
+step5.style.pointerEvents="none";
+step5.innerHTML="🔒";
+
+}
+
+});
+
+</script>
+  
 </head>
   
 <body>
@@ -227,8 +252,6 @@ transform:scale(1.15);
 <a href="index5.html" class="step">۵</a>
 
 </div>
-
-<div class="done step">۱</div>
 
 <div class="box">
 
