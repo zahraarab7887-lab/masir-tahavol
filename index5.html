@@ -191,7 +191,23 @@ transform:scale(1.15);
 }
   
 </style>
+  
+<script>
 
+const today = new Date();
+
+const unlockDate = new Date("2026-07-24"); // ۲ مرداد
+
+if(today < unlockDate){
+
+alert("⏳ ایستگاه پنجم هنوز فعال نشده است.");
+
+window.location.href="index.html";
+
+}
+
+</script>
+  
 </head>
   
 <body>
