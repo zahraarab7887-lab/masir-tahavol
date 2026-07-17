@@ -191,7 +191,50 @@ transform:scale(1.15);
 }
   
 </style>
+  
+<script>
 
+const today = new Date();
+
+const unlockDates = {
+
+lesson4:new Date("2026-07-22"), // ۳۱ تیر
+
+lesson5:new Date("2026-07-24")  // ۲ مرداد
+
+};
+
+window.addEventListener("DOMContentLoaded",()=>{
+
+const steps=document.querySelectorAll(".path a");
+
+const dates=[
+null,
+null,
+null,
+unlockDates.lesson4,
+unlockDates.lesson5
+];
+
+steps.forEach((step,index)=>{
+
+if(index<3) return;
+
+if(today<dates[index]){
+
+step.style.opacity=".45";
+step.style.cursor="not-allowed";
+step.style.pointerEvents="none";
+step.innerHTML="🔒";
+
+}
+
+});
+
+});
+
+</script>
+  
 </head>
 
   <body>
